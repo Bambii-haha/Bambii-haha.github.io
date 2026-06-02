@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>学习笔记 - DaHa</title>
+    <style>
+        body {
+            margin: 0;
+            color: #202124;
+            background: #f5f5fb;
+            font-family: Arial, "Microsoft YaHei", sans-serif;
+            line-height: 1.8;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            width: min(1180px, calc(100% - 32px));
+            margin: 0 auto;
+            padding: 48px 0;
+        }
+
+        .back {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #73777d;
+        }
+
+        .header {
+            margin-bottom: 28px;
+        }
+
+        .tag {
+            display: inline-block;
+            margin-bottom: 16px;
+            padding: 8px 18px;
+            border-radius: 4px;
+            color: #fff;
+            background: #2aa198;
+            font-weight: 700;
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            color: #202124;
+            font-size: 34px;
+        }
+
+        .desc {
+            margin: 0;
+            color: #73777d;
+            font-size: 18px;
+        }
+
+        .note-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .note-card {
+            background: #fff;
+            border: 1px solid #e8e8ef;
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .note-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+        }
+
+        .note-cover {
+            height: 180px;
+            background: #eef0f4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .note-cover img {
+            width: 68%;
+            height: 68%;
+            object-fit: contain;
+        }
+
+        .note-body {
+            padding: 24px;
+        }
+
+        .note-category {
+            display: inline-block;
+            margin-bottom: 14px;
+            padding: 5px 12px;
+            border-radius: 4px;
+            color: #fff;
+            background: #2aa198;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .note-title {
+            margin: 0 0 10px;
+            color: #34495e;
+            font-size: 22px;
+            line-height: 1.4;
+        }
+
+        .note-desc {
+            margin: 0 0 18px;
+            color: #73777d;
+            font-size: 16px;
+        }
+
+        .note-meta {
+            color: #73777d;
+            font-size: 14px;
+        }
+
+        @media (max-width: 980px) {
+            .note-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page {
+                padding: 28px 0;
+            }
+
+            .note-list {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <a class="back" href="index.html">返回首页</a>
+
+    <header class="header">
+        <h1>我的学习笔记</h1>
+        <p class="desc">这里记录 Java、Spring Boot、部署上线、项目开发等学习内容。</p>
+    </header>
+
+    <main class="note-list">
+        <a class="note-card" href="/notes/deploy-aliyun">
+            <div class="note-cover">
+                <img src="/aliyun.png" alt="Spring Boot 项目部署到阿里云服务器">
+            </div>
+
+            <div class="note-body">
+                <span class="note-category">部署实战</span>
+                <h2 class="note-title">Spring Boot 项目部署到阿里云服务器</h2>
+                <p class="note-desc">
+                    记录从本地打包 jar、上传服务器、安装 Java、后台启动项目到查看进程的完整部署流程。
+                </p>
+                <div class="note-meta">2026-04-02</div>
+            </div>
+        </a>
+
+        <a class="note-card" href="#">
+            <div class="note-cover">
+                <img src="/java.png" alt="Java 学习笔记">
+            </div>
+
+            <div class="note-body">
+                <span class="note-category">Java</span>
+                <h2 class="note-title">Java 基础学习笔记</h2>
+                <p class="note-desc">
+                    这里以后可以记录 Java 基础、面向对象、集合、异常、IO 等内容。
+                </p>
+                <div class="note-meta">待更新</div>
+            </div>
+        </a>
+
+        <a class="note-card" href="#">
+            <div class="note-cover">
+                <img src="/springboot.png" alt="Spring Boot 学习笔记">
+            </div>
+
+            <div class="note-body">
+                <span class="note-category">Spring Boot</span>
+                <h2 class="note-title">Spring Boot Web 开发笔记</h2>
+                <p class="note-desc">
+                    这里以后可以记录 Controller、页面跳转、静态资源、表单提交等内容。
+                </p>
+                <div class="note-meta">待更新</div>
+            </div>
+        </a>
+    </main>
+</div>
+</body>
+</html>
